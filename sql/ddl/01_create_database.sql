@@ -1,0 +1,5 @@
+CREATE DATABASE IF NOT EXISTS bank_oltp;
+
+USE bank_oltp;
+
+SELECT DATABASE();
