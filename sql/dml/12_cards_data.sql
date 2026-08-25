@@ -1,0 +1,83 @@
+ 
+USE bank_oltp;
+
+INSERT INTO cards
+(
+    card_number_hash,
+    masked_card_number,
+    customer_id,
+    account_id,
+    card_type,
+    card_network,
+    issue_date,
+    expiry_date,
+    card_status,
+    credit_limit,
+    available_limit
+)
+VALUES
+(
+    SHA2('4111111111111001',256),
+    'XXXX-XXXX-XXXX-1001',
+    1,
+    1,
+    'DEBIT',
+    'VISA',
+    '2023-06-15',
+    '2028-06-30',
+    'ACTIVE',
+    0.00,
+    0.00
+),
+(
+    SHA2('4111111111111002',256),
+    'XXXX-XXXX-XXXX-1002',
+    2,
+    2,
+    'DEBIT',
+    'MASTERCARD',
+    '2023-09-10',
+    '2028-09-30',
+    'ACTIVE',
+    0.00,
+    0.00
+),
+(
+    SHA2('4111111111111003',256),
+    'XXXX-XXXX-XXXX-1003',
+    3,
+    3,
+    'CREDIT',
+    'VISA',
+    '2024-01-15',
+    '2029-01-31',
+    'ACTIVE',
+    200000.00,
+    150000.00
+),
+(
+    SHA2('4111111111111004',256),
+    'XXXX-XXXX-XXXX-1004',
+    6,
+    6,
+    'DEBIT',
+    'RUPAY',
+    '2024-05-01',
+    '2029-05-31',
+    'ACTIVE',
+    0.00,
+    0.00
+),
+(
+    SHA2('4111111111111005',256),
+    'XXXX-XXXX-XXXX-1005',
+    9,
+    9,
+    'CREDIT',
+    'VISA',
+    '2024-08-20',
+    '2029-08-31',
+    'BLOCKED',
+    300000.00,
+    200000.00
+);
