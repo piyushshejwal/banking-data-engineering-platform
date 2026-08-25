@@ -1,0 +1,18 @@
+ 
+USE bank_oltp;
+
+INSERT INTO customer_accounts
+(customer_id,account_id,relationship_type,ownership_percentage,effective_from,is_primary_holder)
+VALUES
+(1,1,'PRIMARY',100.00,'2021-06-15',TRUE),
+(2,2,'PRIMARY',100.00,'2022-01-10',TRUE),
+(3,3,'PRIMARY',100.00,'2020-03-18',TRUE),
+(4,4,'PRIMARY',100.00,'2023-07-25',TRUE),
+(5,5,'PRIMARY',100.00,'2019-09-05',TRUE),
+(6,6,'PRIMARY',100.00,'2021-11-12',TRUE),
+(7,7,'PRIMARY',100.00,'2024-02-20',TRUE),
+(8,8,'PRIMARY',100.00,'2025-01-15',TRUE),
+(9,9,'PRIMARY',100.00,'2020-12-07',TRUE),
+(10,10,'PRIMARY',100.00,'2026-01-12',TRUE),
+(1,11,'PRIMARY',50.00,'2025-01-01',TRUE),
+(2,11,'JOINT',50.00,'2025-01-01',FALSE);
